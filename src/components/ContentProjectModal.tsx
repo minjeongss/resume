@@ -24,7 +24,7 @@ const Content=styled.div`
     height:60%;
     padding:15px;
 
-    border-radius: 10%;
+    border-radius: 30px;
     background-color: rgba(255,255,255,1);
 `;
 
@@ -42,7 +42,7 @@ const ContentProjectModal = ({closeModal}:ModalProps) => {
                 <h2>웹 프로젝트</h2>
                 <h3>기간</h3>
                 <h3>역할</h3>
-                <button onClick={closeModal}>X</button>
+                <button onClick={closeModal}>CLOSE</button>
             </Content>
         </Container>
     );
