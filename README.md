@@ -7,7 +7,7 @@
 - 라이브러리: Styled Component
 - 번들링 도구: Vite
 - 패키지 매니저: yarn
-- 빌드: Github Pages
+- 빌드: Github Pages, Git Action
 
 ### 사용 방법
 - 실행
