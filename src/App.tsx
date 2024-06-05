@@ -4,6 +4,9 @@ import ContentTechStack from './components/ContentTechStack';
 import ContentProject from './components/ContentProject';
 import styled, {createGlobalStyle} from 'styled-components';
 
+import ContentProjectModal from './components/ContentProjectModal';
+import { useState } from 'react';
+
 const GlobalStyle=createGlobalStyle`
   #root{
     max-width: 1280px;
@@ -19,6 +22,10 @@ const Hr=styled.hr`
 `;
 
 function App() {
+  const [isModalOpen,setIsModalOpen]=useState(false);
+  const openModal=()=>setIsModalOpen(true);
+  const closeModal=()=>setIsModalOpen(false);
+
   return (
     <>
       <GlobalStyle />
@@ -35,6 +42,8 @@ function App() {
       
       <h2>About Project</h2>
       <ContentProject />
+      <button onClick={openModal}>Modal Test</button>
+      {isModalOpen && <ContentProjectModal closeModal={closeModal}/>}
     </>
   )
 }
