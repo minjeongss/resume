@@ -42,7 +42,12 @@ function App() {
       <Hr />
       
       <h2>About Project</h2>
-      <div>투비컨티뉴✈️</div>
+      <div>
+        <div>
+          <span>웹 제작 프로젝트</span>
+          <button>더보기</button>
+        </div>
+      </div>
       
     </>
   )
