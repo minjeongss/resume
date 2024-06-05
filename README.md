@@ -14,3 +14,7 @@
 ```
 yarn dev
 ```
+- 배포
+```
+yarn run deploy
+```
