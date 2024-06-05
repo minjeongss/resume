@@ -8,3 +8,9 @@
 - 번들링 도구: Vite
 - 패키지 매니저: yarn
 - 빌드: Github Pages
+
+### 사용 방법
+- 실행
+```
+yarn dev
+```
