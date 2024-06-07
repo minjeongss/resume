@@ -29,19 +29,29 @@ const Content=styled.div`
 `;
 
 export interface ModalProps{
+    project:Project;
     closeModal:()=>void;
 }
-
-const ContentProjectModal = ({closeModal}:ModalProps) => {
+interface Project{
+    title:string;
+    detail:string;
+    position:string;
+    duration:string;
+    tech:string;
+    link:string;
+}
+const ContentProjectModal = ({project, closeModal}:ModalProps) => {
     const handleBackgroundClick=(e:React.MouseEvent<HTMLDivElement>)=>{
         if(e.target===e.currentTarget) closeModal();
     }
     return (
         <Container onClick={handleBackgroundClick}>
             <Content>
-                <h2>웹 프로젝트</h2>
-                <h3>기간</h3>
-                <h3>역할</h3>
+                <h2>{project.title}</h2>
+                <h3>{project.detail}</h3>
+                <div>기간: {project.duration}</div>
+                <div>역할: {project.position}</div>
+                <div>사용한 기술: {project.tech}</div>
                 <button onClick={closeModal}>CLOSE</button>
             </Content>
         </Container>
