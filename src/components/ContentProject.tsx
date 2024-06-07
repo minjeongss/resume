@@ -70,7 +70,7 @@ const ContentProject = () => {
                     return (
                         <Box>
                             <h3>
-                                <a href={elem.link}>{elem.title}</a>, 
+                                <a href={elem.link}>{elem.title}</a>,
                                 {elem.duration}
                                 {elem.content && <Button onClick={()=>openModal(elem)}>Detail</Button>}
                                 
