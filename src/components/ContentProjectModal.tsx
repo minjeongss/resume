@@ -61,7 +61,7 @@ const ContentProjectModal = ({project, closeModal}:ModalProps) => {
     return (
         <ContainerBack onClick={handleBackgroundClick}>
             <ContainerFront>
-                <h2> {project.title} </h2>
+                <h2><a href={project.link}>{project.title}</a></h2>
                 <ContentDetail>: {project.detail}</ContentDetail>
                 <Content>
                     <h3>기간: {project.duration}</h3>

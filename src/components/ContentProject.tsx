@@ -5,10 +5,23 @@ import styled from "styled-components";
 const Hr=styled.hr`
     border:2px solid rgb(0,0,0,0.2);
 `;
-const Box=styled.div`
+const Container=styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-left: 5px solid #ddd;
+    margin-bottom: 10px;
     &:hover{
 
     }
+`;
+const ContainerText=styled.div`
+    flex:1;
+`;
+const ContainerImage=styled.img`
+    width:25%;
+    object-fit:cover;
 `;
 const Button=styled.button`
     font-size: 0.8em;
@@ -23,6 +36,7 @@ interface Project{
     link:string;
     content:string;
     takeaway:string;
+    imageUrl?:string;
 }
 
 const ContentProject = () => {
@@ -44,7 +58,7 @@ const ContentProject = () => {
         {title:"[공간지능 및 로보틱스 연구실] 학부연구생",detail:"다층 환경 주행을 위한 모바일 매니퓰레이터 및 내비게이션 기술",position:"개발(제어)",duration:"2023-2024",tech:"ROS1, Python",link:"https://sites.google.com/view/sparo",
             content:"2023 동계 학부 연구생 인턴십 프로그램, 2024 1학기 학부 연구생 인턴십 프로그램에 참여했습니다. ",takeaway:"모바일 로봇 제어"},
         {title:"[유진로봇] 인턴사원",detail:"청소로봇 개발 테스트 및 UI 시나리오 검증",position:"개발(테스트)",duration:"2024",tech:"Linux",link:"https://yujinrobot.com/",
-            content:"청소로봇 연구실 소프트웨어 부서에서 인턴을 진행했습니다. ",takeaway:"테스트 역량, 리눅스 사용 능력 향상, 시니어 엔지니어와의 소통"},
+            content:"청소로봇 연구실 소프트웨어 부서에서 현장실습을 진행했습니다. ",takeaway:"테스트 역량, 리눅스 사용 능력 향상, 시니어 엔지니어와의 소통"},
     ];
 
     const [isModalOpen,setIsModalOpen]=useState(false);
@@ -68,16 +82,20 @@ const ContentProject = () => {
             {
                 project.reverse().map((elem)=>{
                     return (
-                        <Box>
-                            <h3>
-                                <a href={elem.link}>{elem.title}</a>,
-                                {elem.duration}
-                                {elem.content && <Button onClick={()=>openModal(elem)}>Detail</Button>}
-                                
-                            </h3>
-                            <div>{elem.detail}</div>
-                            <div>직무: {elem.position}, {elem.tech}</div>
-                        </Box>
+                        <Container key={elem.title}>
+                            <ContainerText>
+                                <h3>
+                                📂 <a href={elem.link}>{elem.title}</a>,
+                                    {elem.duration}
+                                    {elem.content && <Button onClick={()=>openModal(elem)}>Detail</Button>}
+                                    
+                                </h3>
+                                <div>{elem.detail}</div>
+                                <div>직무: {elem.position}</div>
+                                <div>사용한 기술: {elem.tech}</div>
+                            </ContainerText>
+                            {elem.imageUrl && <ContainerImage src={elem.imageUrl} alt={`${elem.title}`}/>} 
+                        </Container>
                     )
                 })
             }

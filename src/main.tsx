@@ -24,6 +24,7 @@ const GlobalFont=createGlobalStyle`
   a {
     font-weight: 500;
     color: #646cff;
+    // color: rgb(136,134,60);
     text-decoration: inherit;
   }
   a:hover {
