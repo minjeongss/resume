@@ -20,14 +20,18 @@ const ContainerFront=styled.div`
     align-items: center;
     flex-direction: column;
 
-    width: 50%;
-    height: 60%;
+    width: 70%;
+    height: 80%;
     padding: 15px;
 
     border-radius: 30px;
     background-color: rgba(255,255,255,1);
 `;
 const ContentDetail=styled.h3`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width:80%;
 `;
 const Content=styled.div`
@@ -47,6 +51,8 @@ interface Project{
     duration:string;
     tech:string;
     link:string;
+    content:string;
+    takeaway:string;
 }
 const ContentProjectModal = ({project, closeModal}:ModalProps) => {
     const handleBackgroundClick=(e:React.MouseEvent<HTMLDivElement>)=>{
@@ -55,15 +61,19 @@ const ContentProjectModal = ({project, closeModal}:ModalProps) => {
     return (
         <ContainerBack onClick={handleBackgroundClick}>
             <ContainerFront>
-                <h2>[ {project.title} ]</h2>
+                <h2> {project.title} </h2>
                 <ContentDetail>: {project.detail}</ContentDetail>
                 <Content>
-                    <h3>주소: <a href={project.link} target='_blank'>{project.link}</a></h3>
                     <h3>기간: {project.duration}</h3>
-                    <h3>역할: {project.position}</h3>
+                    <h3>직무: {project.position}</h3>
                     <h3>사용한 기술: {project.tech}</h3>
-                    <Button onClick={closeModal}>CLOSE</Button>
+                    <h3>개발 내용</h3>
+                        <div>{project.content}</div>
+                    <h3>배운 점/느낀 점</h3>
+                        <div>{project.takeaway}</div>
+                    <h3>주소: <a href={project.link} target='_blank'>{project.link}</a></h3>
                 </Content>
+                <Button onClick={closeModal}>CLOSE</Button>
             </ContainerFront>
         </ContainerBack>
     );

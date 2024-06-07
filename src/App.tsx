@@ -7,7 +7,7 @@ import styled, {createGlobalStyle} from 'styled-components';
 const GlobalStyle=createGlobalStyle`
   #root{
     max-width: 1280px;
-    width: 45%;
+    width: 60%;
     margin: auto;
     padding: 2rem;
     text-align: left;
