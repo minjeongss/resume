@@ -22,6 +22,7 @@ interface Project{
     tech:string;
     link:string;
 }
+
 const ContentProject = () => {
     const project=[
         {title:"Watfle",detail:"영화 리뷰 웹페이지",position:"개발(프론트엔드)",duration:"2020-2021",tech:"JS, CSS, HTML",link:"https://github.com/minjeongss/web-Watfle"},
