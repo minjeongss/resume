@@ -9,6 +9,7 @@ const ContainerWrapper=styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    color: #000000;
 `;
 const Container=styled.div`
     flex: 1 1 500px;
