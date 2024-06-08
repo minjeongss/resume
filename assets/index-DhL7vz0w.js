@@ -135,6 +135,9 @@ a {
     padding: 2rem;
     text-align: left;
   }
+  @media (max-width:600px){
+    width: 85%;
+  }
 `,Zo=Te.hr`
   border:3px solid rgb(136,134,60);
 `;function Zm(){return C.jsxs(C.Fragment,{children:[C.jsx(Xm,{}),C.jsx(Ih,{}),C.jsx(Zo,{}),C.jsx("h2",{children:"About ME"}),C.jsx(Dm,{}),C.jsx(Zo,{}),C.jsx("h2",{children:"About Tech Stack"}),C.jsx(Mm,{}),C.jsx(Zo,{}),C.jsx("h2",{children:"About Project"}),C.jsx(Ym,{})]})}const Jm=id`
