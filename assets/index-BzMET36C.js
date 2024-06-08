@@ -82,7 +82,7 @@ a {
     background-color: rgba(255,255,255,1);
 
     @media (max-width:600px){ //작은 화면 처리
-        width:90%;
+        width:80%;
         padding:10px;
     }
 `,Um=Te.h3`
@@ -99,6 +99,9 @@ a {
     background-color: #646cff;
     color: white;
     cursor: pointer;
+    &:hover{
+        color: white;
+    }
 `,Wm=({project:e,closeModal:t})=>{const n=r=>{r.target===r.currentTarget&&t()};return C.jsx(Fm,{onClick:n,children:C.jsxs(Am,{children:[C.jsx("h2",{children:C.jsx("a",{href:e.link,children:e.title})}),C.jsxs(Um,{children:[": ",e.detail]}),C.jsxs(Bm,{children:[C.jsxs("h3",{children:["기간: ",e.duration]}),C.jsxs("h3",{children:["직무: ",e.position]}),C.jsxs("h3",{children:["사용한 기술: ",e.tech]}),C.jsx("h3",{children:"개발 내용"}),C.jsx("div",{children:e.content}),C.jsx("h3",{children:"배운 점/느낀 점"}),C.jsx("div",{children:e.takeaway}),C.jsxs("h3",{children:["주소: ",C.jsx("a",{href:e.link,target:"_blank",children:e.link})]})]}),C.jsx(Vm,{onClick:t,children:"CLOSE"})]})})},Hm=Te.div`
     margin-bottom: 10px;
 `,Qm=Te.div`
@@ -112,10 +115,16 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-    // width: 70%;
     width: 100%;
     margin:0;
+
+    //모바일 환경 처리
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+    }
 `,Ym=()=>{const e=[{type:"web",title:"[교내 동아리 IGRUS] 팀 Watfle",detail:"영화 리뷰 웹페이지",position:"개발(프론트엔드)",duration:"2020-2021",tech:"JS, CSS, HTML",link:"https://github.com/minjeongss/web-Watfle",content:"",takeaway:""},{type:"etc",title:"[교내 빅데이터 학회 INBIG] 소모임 데이터 시각화",detail:"데이터 분석",position:"개발",duration:"2021",tech:"Python, Tableau",link:"https://github.com/minjeongss/Data-Visualization",content:"",takeaway:""},{type:"etc",title:"[개인 팀] SosoVillage",detail:"2D 인디게임",position:"개발,디자인",duration:"2022",tech:"C#, Unity",link:"https://github.com/JeongHyunJi/SosoVillage",content:"",takeaway:""},{type:"web",title:"[연합 동아리 UMC] 팀 오늘뭐하니",detail:"놀거리 플랫폼 서비스",position:"개발(백엔드)",duration:"2023",tech:"Node.js(ES6)",link:"https://github.com/UMC-LetsDo/what-you-do-today-back",content:"",takeaway:""},{type:"web",title:"[해커톤 준비] 팀 귀농귀농",detail:"귀농 플랫폼 서비스",position:"개발(프론트엔드)",duration:"2023",tech:"React.js(ES6)",link:"https://github.com/GwinongGwinong/frontend",content:"",takeaway:""},{type:"web",title:"[교내 동아리 IGRUS] 소모임 Connect",detail:"리액트 강의",position:"강의 보조 및 피드백",duration:"2023",tech:"React.js(ES6)",link:"https://github.com/Connect-Organization/2023-ReactStudy-Jeong",content:"",takeaway:""},{type:"web",title:"[연합 동아리 GDSC] 팀 나날이",detail:"날씨별 옷 추천 플랫폼 서비스",position:"개발(프론트엔드)",duration:"2023",tech:"React.js(ES6)",link:"https://github.com/Nanali-cody/frontend",content:"",takeaway:""},{type:"robot",title:"[공간지능 및 로보틱스 연구실] 학부연구생",detail:"다층 환경 주행을 위한 모바일 매니퓰레이터 및 내비게이션 기술",position:"개발(제어)",duration:"2023-2024",tech:"ROS1, Python",link:"https://sites.google.com/view/sparo",content:"2023 동계 학부 연구생 인턴십 프로그램, 2024 1학기 학부 연구생 인턴십 프로그램에 참여했습니다. ",takeaway:"모바일 로봇 제어"},{type:"robot",title:"[유진로봇] 인턴사원",detail:"청소로봇 개발 테스트 및 UI 시나리오 검증",position:"개발(테스트)",duration:"2024",tech:"Linux",link:"https://yujinrobot.com/",content:"청소로봇 연구실 소프트웨어 부서에서 현장실습을 진행했습니다. ",takeaway:"테스트 역량, 리눅스 사용 능력 향상, 시니어 엔지니어와의 소통"}],[t,n]=Xt.useState(!1),[r,l]=Xt.useState(null),o=u=>{n(!0),l(u),document.body.style.overflow="hidden"},i=()=>{n(!1),l(null),document.body.style.overflow="unset"};return C.jsxs(C.Fragment,{children:[C.jsxs(Hm,{children:[C.jsx("div",{children:"2020년부터 2024년도까지 진행했던 프로젝트를 기재하였습니다."}),C.jsx("div",{children:"회사 또는 팀을 클릭하실 경우 자세한 내용을 보실 수 있습니다."})]}),C.jsx(Qm,{children:e.reverse().map(u=>C.jsx(Gm,{children:C.jsxs(Km,{onClick:()=>o(u),children:[C.jsxs("h3",{children:["📂 ",u.title,", ",u.duration]}),C.jsx("h4",{children:u.detail}),C.jsxs("div",{children:["- 직무: ",u.position]}),C.jsxs("div",{children:["- 사용한 기술: ",u.tech]}),C.jsx("h3",{children:C.jsx("a",{href:u.link,children:"📌 주소"})})]})},u.title))}),t&&r&&C.jsx(Wm,{project:r,closeModal:i})]})},Xm=id`
   #root{
     max-width: 1280px;
