@@ -5,9 +5,6 @@ import styled from "styled-components";
 const ContentIntro=styled.div`
     margin-bottom: 10px;
 `;
-const Hr=styled.hr`
-    border:2px solid rgb(0,0,0,0.2);
-`;
 const ContainerWrapper=styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -25,13 +22,6 @@ const ContainerText=styled.button`
     // width: 70%;
     width: 100%;
     margin:0;
-`;
-const ContainerImage=styled.img`
-    width:25%;
-    object-fit:cover;
-`;
-const Button=styled.button`
-    font-size: 0.8em;
 `;
 
 interface Project{
