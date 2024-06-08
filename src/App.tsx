@@ -12,6 +12,9 @@ const GlobalStyle=createGlobalStyle`
     padding: 2rem;
     text-align: left;
   }
+  @media (max-width:600px){
+    width: 85%;
+  }
 `;
 
 const Hr=styled.hr`
