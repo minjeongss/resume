@@ -33,6 +33,13 @@ const ContainerFront=styled.div`
         padding:10px;
     }
 `;
+const ContentTitle=styled.h2`
+    display: flex;
+    justidy-content: center;
+    align-items: center;
+    word-wrap:break-word; //화면 벗어나지 않게 설정
+    overflow-wrap:break-word; //화면 벗어나지 않게 설정
+`;
 const ContentDetail=styled.h3`
     width:80%;
     word-wrap:break-word; //화면 벗어나지 않게 설정
@@ -74,7 +81,7 @@ const ContentProjectModal = ({project, closeModal}:ModalProps) => {
     return (
         <ContainerBack onClick={handleBackgroundClick}>
             <ContainerFront>
-                <h2><a href={project.link}>{project.title}</a></h2>
+                <ContentTitle><a href={project.link}>{project.title}</a></ContentTitle>
                 <ContentDetail>: {project.detail}</ContentDetail>
                 <Content>
                     <h3>기간: {project.duration}</h3>

@@ -26,8 +26,15 @@ const ContainerText=styled.button`
     border: none;
     color: inherit;
     cursor: pointer;
-    a{
+    
+    a {
         text-decoration: none;
+    }
+
+    h3{
+        @media (max-width: 600px){
+            text-align: center;
+        }
     }
 `;
 
