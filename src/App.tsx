@@ -13,7 +13,9 @@ const GlobalStyle=createGlobalStyle`
     text-align: left;
   }
   @media (max-width:600px){
-    width: 85%;
+    #root {
+      width: 85%;
+    }
   }
 `;
 
