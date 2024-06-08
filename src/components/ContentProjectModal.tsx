@@ -34,9 +34,8 @@ const ContainerFront=styled.div`
     }
 `;
 const ContentTitle=styled.h2`
-    display: flex;
-    justidy-content: center;
-    align-items: center;
+    width:80%;
+    text-align: center;
     word-wrap:break-word; //화면 벗어나지 않게 설정
     overflow-wrap:break-word; //화면 벗어나지 않게 설정
 `;
