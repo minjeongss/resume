@@ -64,10 +64,12 @@ const ContentProject = () => {
     const openModal=(elem:Project)=>{
         setIsModalOpen(true);
         setSelectProject(elem);
+        document.body.style.overflow="hidden";
     };
     const closeModal=()=>{
         setIsModalOpen(false);
         setSelectProject(null);
+        document.body.style.overflow="unset";
     }
     
         return (
