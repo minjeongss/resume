@@ -29,7 +29,7 @@ const ContainerFront=styled.div`
     background-color: rgba(255,255,255,1);
 
     @media (max-width:600px){ //작은 화면 처리
-        width:90%;
+        width:80%;
         padding:10px;
     }
 `;
@@ -49,6 +49,9 @@ const Button=styled.button`
     background-color: #646cff;
     color: white;
     cursor: pointer;
+    &:hover{
+        color: white;
+    }
 `;
 export interface ModalProps{
     project:Project;

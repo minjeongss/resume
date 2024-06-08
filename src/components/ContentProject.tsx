@@ -18,10 +18,16 @@ const ContainerText=styled.button`
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-    // width: 70%;
     width: 100%;
     margin:0;
+
+    //모바일 환경 처리
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    a{
+        text-decoration: none;
+    }
 `;
 
 interface Project{
