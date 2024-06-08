@@ -91,6 +91,11 @@ a {
     text-align: center;
     word-wrap:break-word; //화면 벗어나지 않게 설정
     overflow-wrap:break-word; //화면 벗어나지 않게 설정
+
+    a {
+        display: block;
+        width: 100%;
+    }
 `,Bm=Se.h3`
     width:80%;
     word-wrap:break-word; //화면 벗어나지 않게 설정
