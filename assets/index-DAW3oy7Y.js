@@ -50,6 +50,7 @@ padding: 10px;
 text-align: center;
 white-space: nowrap; // 텍스트 줄바꿈 방지
 text-overflow: ellipsis; // 텍스트가 넘치면 생략 부호 표시
+color: #000000;
 
 a {
     color: inherit;
@@ -108,6 +109,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    color: #000000;
 `,Gm=Te.div`
     flex: 1 1 500px;
     box-sizing: border-box;
