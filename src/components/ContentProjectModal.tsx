@@ -21,24 +21,34 @@ const ContainerFront=styled.div`
     flex-direction: column;
 
     width: 70%;
+    max-width: 800px; //최대 너비 고정
     height: 80%;
     padding: 15px;
 
     border-radius: 30px;
     background-color: rgba(255,255,255,1);
+
+    @media (max-width:600px){ //작은 화면 처리
+        width:90%;
+        padding:10px;
+    }
 `;
 const ContentDetail=styled.h3`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width:80%;
+    word-wrap:break-word; //화면 벗어나지 않게 설정
+    overflow-wrap:break-word; //화면 벗어나지 않게 설정
 `;
 const Content=styled.div`
     width: 80%;
+    flex-grow:1; //남은 공간 모두 차지
+    overflow-y:auto; //내용 길어지면 스크롤
 `;
 const Button=styled.button`
     margin:0;
+    padding: 10px 20px;
+    background-color: #646cff;
+    color: white;
+    cursor: pointer;
 `;
 export interface ModalProps{
     project:Project;
