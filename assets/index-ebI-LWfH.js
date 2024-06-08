@@ -136,7 +136,9 @@ a {
     text-align: left;
   }
   @media (max-width:600px){
-    width: 85%;
+    #root {
+      width: 85%;
+    }
   }
 `,Zo=Te.hr`
   border:3px solid rgb(136,134,60);
