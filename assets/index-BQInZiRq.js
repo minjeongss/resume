@@ -137,7 +137,7 @@ a {
   }
   @media (max-width:600px){
     #root {
-      width: 85%;
+      width: 85% !important;
     }
   }
 `,Zo=Te.hr`
