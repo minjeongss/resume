@@ -14,7 +14,7 @@ const GlobalStyle=createGlobalStyle`
   }
   @media (max-width:600px){
     #root {
-      width: 85%;
+      width: 85% !important;
     }
   }
 `;
