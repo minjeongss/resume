@@ -38,6 +38,11 @@ const ContentTitle=styled.h2`
     text-align: center;
     word-wrap:break-word; //화면 벗어나지 않게 설정
     overflow-wrap:break-word; //화면 벗어나지 않게 설정
+
+    a {
+        display: block;
+        width: 100%;
+    }
 `;
 const ContentDetail=styled.h3`
     width:80%;
