@@ -91,11 +91,17 @@ const ContentProjectModal = ({project, closeModal}:ModalProps) => {
                     <h3>기간: {project.duration}</h3>
                     <h3>직무: {project.position}</h3>
                     <h3>사용한 기술: {project.tech}</h3>
-                    <h3>개발 내용</h3>
-                        <div>{project.content}</div>
-                    <h3>배운 점/느낀 점</h3>
-                        <div>{project.takeaway}</div>
-                    <h3>주소: <a href={project.link} target='_blank'>{project.link}</a></h3>
+                    {project.content && 
+                        <>
+                            <h3>개발 내용</h3>
+                                <div>{project.content}</div>
+                            <h3>배운 점/느낀 점</h3>
+                                <div>{project.takeaway}</div>
+                        </>
+                    }
+                    <h3>📌 주소: <a href={project.link} target='_blank'>
+                        {`${project.link}`}
+                    </a></h3>
                 </Content>
                 <Button onClick={closeModal}>CLOSE</Button>
             </ContainerFront>
