@@ -26,9 +26,9 @@ const ContentMe = () => {
         <>
             <h3>Contact</h3>
                 <ContainerButton>
-                    <Button><a href="https://github.com/minjeongss" target='_blank'>💻️ Github</a></Button>
-                    <Button><a href="https://jeonge.tistory.com/" target='_blank'>📚️ Tech Blog</a></Button>
-                    <Button><a href="mailto:dotoriido@gmail.com" target='_blank'>📨 Email</a></Button>
+                    <Button onClick={()=>window.open("https://github.com/minjeongss")}>💻️ Github</Button>
+                    <Button onClick={()=>window.open("https://jeonge.tistory.com/")}>📚️ Tech Blog</Button>
+                    <Button onClick={()=>window.open("mailto:dotoriido@gmail.com")}>📨 Email</Button>
                 </ContainerButton>
             <h3>Education</h3>
         <div>Inha University, 컴퓨터공학 학사 (2020.03 ~ )</div>
